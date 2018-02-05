@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta content="telephone=no" name="format-detection" />
-  <title> Order Delay </title>
+  <title> Order Shipped </title>
   <link href="https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Cardo:400,400i,700" rel="stylesheet">
@@ -102,27 +102,22 @@
                 <table width="100%" cellpadding="0" cellspacing="0" border="0" bgcolor="#ffffff">
                   <tr>
                     <td width="600">
-                      <div style="display:block; font-size:0pt; line-height:0pt; height:1px; background: #d8d8d8; width: 100%;"><img src="http://dhruphost.com/mysite/email-templet/dhjan2018_409/empty.gif" width="100%" height="1" style="display:block; height:1px; background: #d8d8d8; max-width: 600px;" alt=""> </div>
+                      <!-- <div style="display:block; font-size:0pt; line-height:0pt; height:1px; background: #d8d8d8; width: 100%;"><img src="http://dhruphost.com/mysite/email-templet/dhjan2018_409/empty.gif" width="100%" height="1" style="display:block; height:1px; background: #d8d8d8; max-width: 600px;" alt=""> </div> -->
+
+                      <div> <img src="http://dhruphost.com/mysite/email-templet/dhjan2018_409/line.png" alt="..." class="img-responsive" width="600" height="1" style="max-width: 600px;"> </div>
 
                       <div style="display:block; font-size:0pt; line-height:0pt; height:26px;"><img src="http://dhruphost.com/mysite/email-templet/dhjan2018_409/empty.gif" width="1" height="26" style="display:block; height:26px;" alt=""> </div>
 
-                      <div class="f18" style="font-size: 24px; letter-spacing: 7px; font-family: 'Cardo', serif; text-transform: uppercase; text-align: center; color: #000000;"> Hi Zachary! </div>
+                      <div class="f18" style="font-size: 24px; letter-spacing: 7px; font-family: 'Cardo', serif; text-transform: uppercase; text-align: center; color: #000000;"> Hi {{.FirstName}}! </div>
 
                       <div style="display:block; font-size:0pt; line-height:0pt; height:10px;"><img src="http://dhruphost.com/mysite/email-templet/dhjan2018_409/empty.gif" width="1" height="10" style="display:block; height:10px;" alt=""> </div>
 
-                      <div style="font-family: 'Montserrat', sans-serif; font-size: 12px; font-weight: normal; font-style: normal; text-transform: uppercase; letter-spacing: 3.4px; text-align: center; color: #000000;"> There has been a delay. </div>
+                      <div style="font-family: 'Montserrat', sans-serif; font-size: 12px; font-weight: normal; font-style: normal; text-transform: uppercase; letter-spacing: 3.4px; text-align: center; color: #000000;"> Your order has shipped. </div>
 
                       <div style="display:block; font-size:0pt; line-height:0pt; height:20px;"><img src="http://dhruphost.com/mysite/email-templet/dhjan2018_409/empty.gif" width="1" height="20" style="display:block; height:20px;" alt=""> </div>
 
-                      <div style="width: 300px; display: block; margin: 0 auto; font-family: 'Open Sans', sans-serif; font-size: 12px; font-weight: normal; font-style: normal; font-stretch: normal; line-height: 2; letter-spacing: 0.2px; text-align: center; color: #000000;"> Your order: <span style="text-decoration: underline;"> 1234567890000 </span> will arrive later than expected. </div>
-
-                      <div style="display:block; font-size:0pt; line-height:0pt; height:10px;"><img src="http://dhruphost.com/mysite/email-templet/dhjan2018_409/empty.gif" width="1" height="10" style="display:block; height:10px;" alt=""> </div>
-
-                      <div style="width: 300px; display: block; margin: 0 auto; font-family: 'Open Sans', sans-serif; font-size: 12px; font-weight: normal; font-style: normal; font-stretch: normal; line-height: 2; letter-spacing: 0.2px; text-align: center; color: #000000;"> If you paid for faster shipping, Customer Service will contact you to update your account. </div>
-
-                      <div style="display:block; font-size:0pt; line-height:0pt; height:10px;"><img src="http://dhruphost.com/mysite/email-templet/dhjan2018_409/empty.gif" width="1" height="10" style="display:block; height:10px;" alt=""> </div>
-
-                      <div style="width: 300px; display: block; margin: 0 auto; font-family: 'Open Sans', sans-serif; font-size: 12px; font-weight: normal; font-style: normal; font-stretch: normal; line-height: 2; letter-spacing: 0.2px; text-align: center; color: #000000;"> If you have any other questions, call us at 000 000.0000. We apologize for any inconvenience. </div>
+                      <div style="width: 300px; display: block; margin: 0 auto; font-family: 'Open Sans', sans-serif; font-size: 12px; font-weight: normal; font-style: normal; font-stretch: normal; line-height: 2; letter-spacing: 0.2px; text-align: center; color: #000000;"> Your order: <span style="text-decoration: underline;">
+                      {{.OrderNumber}}</span> will arrive at {{.Address}}, {{.State}} {{.Zip}} in 4-7 business days. </div>
 
                       <div style="display:block; font-size:0pt; line-height:0pt; height:30px;"><img src="http://dhruphost.com/mysite/email-templet/dhjan2018_409/empty.gif" width="1" height="30" style="display:block; height:30px;" alt=""> </div>
 
@@ -140,7 +135,7 @@
                 <table width="100%" cellpadding="0" cellspacing="0" border="0" bgcolor="#ffffff">
                   <tr>
                     <td width="121" class="w30">
-                      <div style="display:block; font-size:0pt; line-height:0pt; height:1px; background: #d8d8d8; width: 100%;"><img src="http://dhruphost.com/mysite/email-templet/dhjan2018_409/empty.gif" width="100%" height="1" style="display:block; height:1px; background: #d8d8d8; max-width: 600px;" alt=""> </div>
+                      <div> <img src="http://dhruphost.com/mysite/email-templet/dhjan2018_409/line.png" alt="..." class="img-responsive" width="100%" height="1" style="max-width: 121px;"> </div>
                     </td>
 
                     <td width="358" style="border: 1px solid #d8d8d8">
@@ -151,19 +146,19 @@
                           <td width="179">
                             <div style="display:block; font-size:0pt; line-height:0pt; height:5px;"><img src="http://dhruphost.com/mysite/email-templet/dhjan2018_409/empty.gif" width="1" height="5" style="display:block; height:5px;" alt=""> </div>
 
-                            <div class="f10" style="font-family: 'Open Sans', sans-serif; font-size: 14px; font-weight: normal; font-style: normal; font-stretch: normal; line-height: normal; letter-spacing: 0.2px; text-align: center; color: #000000;"> Order Date: 5/16/2017 </div>
+                            <div class="f10" style="font-family: 'Open Sans', sans-serif; font-size: 14px; font-weight: normal; font-style: normal; font-stretch: normal; line-height: normal; letter-spacing: 0.2px; text-align: center; color: #000000;"> Order Date: {{.OrderDate}} </div>
 
                             <div style="display:block; font-size:0pt; line-height:0pt; height:5px;"><img src="http://dhruphost.com/mysite/email-templet/dhjan2018_409/empty.gif" width="1" height="5" style="display:block; height:5px;" alt=""> </div>
                           </td>
 
                           <td width="10" align="center" valign="middle">
-                            <div style="display:block; font-size:0pt; line-height:0pt; height:23px; background: #d8d8d8; width: 1px;"><img src="http://dhruphost.com/mysite/email-templet/dhjan2018_409/empty.gif" width="1" height="23" style="display:block; height:23px; background: #d8d8d8; max-width: 1px;" alt=""> </div>
+                            <div style="display:block; font-size:0pt; line-height:0pt;"><img src="http://dhruphost.com/mysite/email-templet/dhjan2018_409/empty.gif" width="1" height="23" style="display:block; height:23px; background: #d8d8d8; max-width: 1px;" alt=""> </div>
                           </td>
 
                           <td width="169">
                             <div style="display:block; font-size:0pt; line-height:0pt; height:5px;"><img src="http://dhruphost.com/mysite/email-templet/dhjan2018_409/empty.gif" width="1" height="5" style="display:block; height:5px;" alt=""> </div>
 
-                            <div class="f10" style="font-family: 'Open Sans', sans-serif; font-size: 14px; font-weight: normal; font-style: normal; font-stretch: normal; line-height: normal; letter-spacing: 0.2px; text-align: center; color: #000000;"> Order Total: $338.00 </div>
+                            <div class="f10" style="font-family: 'Open Sans', sans-serif; font-size: 14px; font-weight: normal; font-style: normal; font-stretch: normal; line-height: normal; letter-spacing: 0.2px; text-align: center; color: #000000;"> Order Total: ${{.OrderTotal}} </div>
 
                             <div style="display:block; font-size:0pt; line-height:0pt; height:5px;"><img src="http://dhruphost.com/mysite/email-templet/dhjan2018_409/empty.gif" width="1" height="5" style="display:block; height:5px;" alt=""> </div>
                           </td>
@@ -174,7 +169,7 @@
                     </td>
 
                     <td width="121" class="w30">
-                      <div style="display:block; font-size:0pt; line-height:0pt; height:1px; background: #d8d8d8; width: 100%;"><img src="http://dhruphost.com/mysite/email-templet/dhjan2018_409/empty.gif" width="100%" height="1" style="display:block; height:1px; background: #d8d8d8; max-width: 600px;" alt=""> </div>
+                      <div> <img src="http://dhruphost.com/mysite/email-templet/dhjan2018_409/line.png" alt="..." class="img-responsive" width="100%" height="1" style="max-width: 121px;"> </div>
                     </td>
                   </tr>
                 </table>
@@ -190,15 +185,15 @@
 
                       <div style="display:block; font-size:0pt; line-height:0pt; height:10px;"><img src="http://dhruphost.com/mysite/email-templet/dhjan2018_409/empty.gif" width="1" height="10" style="display:block; height:10px;" alt=""> </div>
 
-                      <div style="display:block; font-size:0pt; line-height:0pt; height:1px; background: #d8d8d8; width: 100%;"><img src="http://dhruphost.com/mysite/email-templet/dhjan2018_409/empty.gif" width="100%" height="1" style="display:block; height:1px; background: #d8d8d8; max-width: 400px;" alt=""> </div>
+                      <div> <img src="http://dhruphost.com/mysite/email-templet/dhjan2018_409/line.png" alt="..." class="img-responsive" width="100%" height="1" style="max-width: 400px;"> </div>
 
                       <div style="display:block; font-size:0pt; line-height:0pt; height:20px;"><img src="http://dhruphost.com/mysite/email-templet/dhjan2018_409/empty.gif" width="1" height="20" style="display:block; height:20px;" alt=""> </div>
 
-                      <div style="font-size: 12px; font-weight: 600; font-family: 'Open Sans', sans-serif; font-style: normal; font-stretch: normal; line-height: 1.67; letter-spacing: 0.2px; text-align: center; color: #000000;"> Standard Shipping to Zachary at: </div>
+                      <div style="font-size: 12px; font-weight: 600; font-family: 'Open Sans', sans-serif; font-style: normal; font-stretch: normal; line-height: 1.67; letter-spacing: 0.2px; text-align: center; color: #000000;"> Standard Shipping to {{.FirstName}} at: </div>
 
                       <div style="display:block; font-size:0pt; line-height:0pt; height:5px;"><img src="http://dhruphost.com/mysite/email-templet/dhjan2018_409/empty.gif" width="1" height="5" style="display:block; height:5px;" alt=""> </div>
 
-                      <div style="font-size: 12px; font-family: 'Open Sans', sans-serif; font-weight: normal; font-style: normal; font-stretch: normal; line-height: normal; letter-spacing: 0.2px; text-align: center; color: #000000;"> 678 Broad St. Columbus, OH 43219 </div>
+                      <div style="font-size: 12px; font-family: 'Open Sans', sans-serif; font-weight: normal; font-style: normal; font-stretch: normal; line-height: normal; letter-spacing: 0.2px; text-align: center; color: #000000;"> {{.Address}}, {{.State}} {{.Zip}} </div>
 
                       <div style="display:block; font-size:0pt; line-height:0pt; height:15px;"><img src="http://dhruphost.com/mysite/email-templet/dhjan2018_409/empty.gif" width="1" height="15" style="display:block; height:15px;" alt=""> </div>
 
@@ -238,44 +233,11 @@
 
                       <div style="display:block; font-size:0pt; line-height:0pt; height:20px;"><img src="http://dhruphost.com/mysite/email-templet/dhjan2018_409/empty.gif" width="1" height="20" style="display:block; height:20px;" alt=""> </div>
 
-                      <div style="display:block; margin: 0 auto; font-size:0pt; line-height:0pt; height:1px; background: #d8d8d8; max-width: 330px;"><img src="http://dhruphost.com/mysite/email-templet/dhjan2018_409/empty.gif" width="100%" height="1" style="display:block; height:1px; background: #d8d8d8; max-width: 330px;" alt=""> </div>
+                      <div> <img src="http://dhruphost.com/mysite/email-templet/dhjan2018_409/line.png" alt="..." class="img-responsive" width="100%" height="1" style="max-width: 330px;"> </div>
 
                       <div style="display:block; font-size:0pt; line-height:0pt; height:20px;"><img src="http://dhruphost.com/mysite/email-templet/dhjan2018_409/empty.gif" width="1" height="20" style="display:block; height:20px;" alt=""> </div>
 
-                      <table width="100%" cellpadding="0" cellspacing="0" border="0" bgcolor="#ffffff">
-                        <tr>
-                          <td width="155">
-                            <div> <img src="http://dhruphost.com/mysite/email-templet/dhjan2018_409/palermo.png" alt="..." class="img-responsive" width="155" height="221" style="max-width: 155px !important;"> </div>
-                          </td>
-
-                          <td width="25"> </td>
-
-                          <td width="220">
-                            <div style="font-weight: normal; font-family: 'Montserrat', sans-serif; font-size: 10px; font-style: normal; font-stretch: normal; line-height: normal; letter-spacing: 2px; text-align: left; color: #000000; }"> 40MM </div>
-
-                            <div style="display:block; font-size:0pt; line-height:0pt; height:5px;"><img src="http://dhruphost.com/mysite/email-templet/dhjan2018_409/empty.gif" width="1" height="5" style="display:block; height:5px;" alt=""> </div>
-
-                            <div style="font-family: 'Montserrat', sans-serif; font-size: 18px; font-weight: normal; font-style: normal; font-stretch: normal; line-height: normal; letter-spacing: 4px; text-align: left; color: #000000; text-transform: uppercase;"> Palermo Soul </div>
-
-                            <div style="display:block; font-size:0pt; line-height:0pt; height:10px;"><img src="http://dhruphost.com/mysite/email-templet/dhjan2018_409/empty.gif" width="1" height="10" style="display:block; height:10px;" alt=""> </div>
-
-                            <div style="font-family: 'Montserrat', sans-serif; text-transform: uppercase; font-size: 12px; font-weight: normal; font-style: normal; font-stretch: normal; line-height: normal; letter-spacing: 2px; text-align: left; color: #000000;"> COLOR: Rich Black </div>
-
-                            <div style="display:block; font-size:0pt; line-height:0pt; height:5px;"><img src="http://dhruphost.com/mysite/email-templet/dhjan2018_409/empty.gif" width="1" height="5" style="display:block; height:5px;" alt=""> </div>
-
-                            <div style="font-size: 12px; font-family: 'Open Sans', sans-serif; font-weight: normal; font-style: normal; font-stretch: normal; line-height: normal; letter-spacing: 0.2px; text-align: left; color: #000000;"> Style ID/ITEM/UPC?: 123456 </div>
-
-                            <div style="display:block; font-size:0pt; line-height:0pt; height:15px;"><img src="http://dhruphost.com/mysite/email-templet/dhjan2018_409/empty.gif" width="1" height="15" style="display:block; height:15px;" alt=""> </div>
-
-                            <div style="font-family: 'Open Sans', sans-serif;  font-size: 10px; font-weight: normal; font-style: normal; font-stretch: normal; line-height: normal; letter-spacing: 2px; text-align: left; color: #000000;"> QTY </div>
-
-                            <div style="display:block; font-size:0pt; line-height:0pt; height:10px;"><img src="http://dhruphost.com/mysite/email-templet/dhjan2018_409/empty.gif" width="1" height="10" style="display:block; height:10px;" alt=""> </div>
-
-                            <div style="font-family: 'Open Sans', sans-serif;  font-size: 14px; font-weight: normal; font-style: normal; font-stretch: normal; line-height: normal; letter-spacing: 2px; text-align: left; color: #000000;"> 1 </div>
-                          </td>
-                        </tr>
-                      </table>
-
+                      
                       <div style="display:block; font-size:0pt; line-height:0pt; height:20px;"><img src="http://dhruphost.com/mysite/email-templet/dhjan2018_409/empty.gif" width="1" height="20" style="display:block; height:20px;" alt=""> </div>
 
                       <table cellpadding="0" cellspacing="0" border="0" align="center" class="center" style="background: transparent;border: 2px solid #000000;">
@@ -298,7 +260,7 @@
                     <td>
                       <div style="display:block; font-size:0pt; line-height:0pt; height:40px;"><img src="http://dhruphost.com/mysite/email-templet/dhjan2018_409/empty.gif" width="1" height="40" style="display:block; height:40px;" alt=""> </div>
 
-                      <div style="display:block; font-size:0pt; line-height:0pt; height:2px; background: #000000; width: 100%;"><img src="http://dhruphost.com/mysite/email-templet/dhjan2018_409/empty.gif" width="100%" height="2" style="display:block; height:2px; background: #000000; max-width: 600px;" alt=""> </div>
+                      <div> <img src="http://dhruphost.com/mysite/email-templet/dhjan2018_409/line2.png" alt="..." class="img-responsive" width="100%" height="2" style="max-width: 600px;"> </div>
 
                       <div style="display:block; font-size:0pt; line-height:0pt; height:40px;"><img src="http://dhruphost.com/mysite/email-templet/dhjan2018_409/empty.gif" width="1" height="40" style="display:block; height:40px;" alt=""> </div>
                     </td>
@@ -310,7 +272,7 @@
                     <td width="100"> </td>
 
                     <td width="400">
-                      <div style="font-size: 14px; font-family: 'Montserrat', sans-serif; font-weight: normal; font-style: normal; font-stretch: normal; line-height: normal; letter-spacing: 4px; text-align: center; color: #000000; text-transform: uppercase;"> Need Help? </div>
+                      <div style="font-size: 14px; font-family: 'Montserrat', sans-serif; font-weight: normal; font-style: normal; font-stretch: normal; line-height: normal; letter-spacing: 4px; text-align: center; color: #000000;text-transform: uppercase;"> Need Help? </div>
 
                       <div style="display:block; font-size:0pt; line-height:0pt; height:15px;"><img src="http://dhruphost.com/mysite/email-templet/dhjan2018_409/empty.gif" width="1" height="15" style="display:block; height:15px;" alt=""> </div>
 
@@ -358,7 +320,7 @@
 
                       <div style="display:block; font-size:0pt; line-height:0pt; height:40px;"><img src="http://dhruphost.com/mysite/email-templet/dhjan2018_409/empty.gif" width="1" height="40" style="display:block; height:40px;" alt=""> </div>
 
-                      <div style="display:block; font-size:0pt; line-height:0pt; height:1px; background: #d8d8d8; width: 100%;"><img src="http://dhruphost.com/mysite/email-templet/dhjan2018_409/empty.gif" width="100%" height="1" style="display:block; height:1px; background: #d8d8d8; max-width: 600px;" alt=""> </div>
+                      <div> <img src="http://dhruphost.com/mysite/email-templet/dhjan2018_409/line.png" alt="..." class="img-responsive" width="100%" height="1" style="max-width: 400px;"> </div>
 
                       <div style="display:block; font-size:0pt; line-height:0pt; height:30px;"><img src="http://dhruphost.com/mysite/email-templet/dhjan2018_409/empty.gif" width="1" height="30" style="display:block; height:30px;" alt=""> </div>
 
